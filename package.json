@@ -32,7 +32,9 @@
     "serve-favicon": "~2.0.1",
     "socket.io": "~1.3.5",
     "winston": "*",
-    "debug": "*"
+    "debug": "*",
+    "react ":"*",
+    "react-dom":"*"
   },
   "devDependencies": {
     "connect-livereload": "~0.4.0",
@@ -46,6 +48,7 @@
     "grunt-contrib-less": "^0.12.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-express-server": "~0.4.17",
+    "grunt-react": "*",
     "grunt-ssh": ">=0.12.6",
     "grunt-browserify": "*",
     "load-grunt-tasks": "^0.6.0",

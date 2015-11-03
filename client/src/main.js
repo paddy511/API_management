@@ -1,6 +1,8 @@
-var xxx = require("./components/test");
-var _jquery = require("../libs/jquery.min.js");
-console.log($);
-console.log(jQuery);
-console.log(xxx);
-xxx.xxx();
+var React = require("react");
+var ReactDOM = require("react-dom");
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('example')
+);
+console.log(React);
+console.log(ReactDOM);
