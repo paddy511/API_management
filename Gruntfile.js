@@ -61,6 +61,9 @@ module.exports = function (grunt) {
         src: ['<%= src %>/**/*.js']
       },
       browserify: {
+        options:      {
+          transform:  [ require('grunt-react').browserify ]
+        },
         js: {
           files: {
             '<%= app %>/concat/api_management.js': ['client/src/main.js']
