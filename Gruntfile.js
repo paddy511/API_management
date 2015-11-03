@@ -18,6 +18,35 @@ module.exports = function (grunt) {
         ' * @version v<%= pkg.version %><%= buildtag %>\n' +
         ' */'
       },
+      concat: {
+          less: {
+              src: ['<%= app %>/src/**/*.less'],
+              dest: '<%= app %>/concat/api_management.less'
+          }
+      },
+      less: {
+          options: {
+              compress: true,
+              stdout: true,
+              stderr: true
+          },
+          compile: {
+              files: [
+                  {
+                      expand: true,
+                      cwd: '<%= app %>/concat',
+                      src: ['api_management.less'],
+                      dest: '<%= app %>/concat',
+                      rename: function (dest, src) {
+                          return dest + '/' + src.replace(/\.less/, '.css');
+                      }
+                  }
+              ]
+          }
+      },
+      clean: {
+          less: ['<%= app %>/concat/api_management.less'],
+      },
       jshint: {
         options: {
           curly: true,    //必须大括号包裹
@@ -30,16 +59,6 @@ module.exports = function (grunt) {
           node: true     //
         },
         src: ['<%= src %>/**/*.js']
-      },
-      concat: {
-        //css: {
-        //    src: ['<%= app %>/css/**/*.css'],
-        //    dest: '<%= app %>/concat/emigration.css'
-        //},
-        js: {
-          src: ['<%= app %>/src/**/*.js'],
-          dest: '<%= app %>/concat/api_management.js'
-        }
       },
       browserify: {
         js: {
@@ -59,6 +78,10 @@ module.exports = function (grunt) {
         mergeJs: {
           files: ['<%= src %>/**/*.js'],
           tasks: ['browserify:js']
+        },
+        less: {
+          files: ['<%= src %>/**/*.less'],
+          tasks: ['compile_css']
         }
       },
       sshexec: {
@@ -75,5 +98,5 @@ module.exports = function (grunt) {
 
     //grunt.registerTask('lessx', ['less:app', 'less:admin']);
     grunt.registerTask('default', []);
-
+    grunt.registerTask('compile_css', ["concat:less", "less:compile", "clean:less"]);
 };
