@@ -1,60 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Keywords" content="互联网金融,银板客,上海银板客互联网金融信息技术有限公司,集团宝,财富宝">
-    <meta property="qc:admins" content="354266444762767167641656375" />
-    <meta property="wb:webmaster" content="d21edad5c36531a4" />
+  <head>
+    <meta charset="utf-8">
+    <title>React Tutorial</title>
+    <!-- Not present in the tutorial. Just for basic styling. -->
+    <link rel="stylesheet" href="css/base.css" />
+    <script src="libs/react.js"></script>
+    <script src="libs/react-dom.js"></script>
+    <script src="libs/browser.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/marked.min.js"></script>
+  </head>
+  <body>
+    <div id="products"></div>
 
-    <meta name="Description" content="银板客（www.ubankers.com）是专门为资本师（金融产品开发及供应方）、投资者（金融产品需求及购买方）以及财富师（为投资者提供购买咨询的服务方）提供金融产品交易、咨询的综合服务平台（OFIS）。">
-
-    <!--SEO-->
-    <meta name="baidu-site-verification" content="d7ayVCjJX7" />    <!--ronganonline-->
-    <meta name="baidu-site-verification" content="vOt6k5C7vw" />    <!--ubankers-->
-    <meta name="360-site-verification" content="6c3c8b0b81517dc5e7b5701720f3c003" />    <!--ronganonline-->
-    <meta name="360-site-verification" content="143f4e7b0dc53d2d209370198b559da1" />    <!--ubankers-->
-    <meta name="sogou_site_verification" content="fdvYtpmHvx"/>    <!--ronganonline-->
-    <meta name="sogou_site_verification" content="edguI6SfTE"/>    <!--ubankers-->
-
-
-    <title> 银板客 </title>
-    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.2.0-dist/css/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="plugins/font-wesome/css/font-awesome.css"/>
-    <link rel="stylesheet" type="text/css" href="bower_components/ra_basic_tools/ra_basic_tools.css"/>
-    <link rel="stylesheet" type="text/css" href="bower_components/ra_session_management/ra_session_management.css"/>
-    <link rel="stylesheet" type="text/css" href="concat/emigration.css"/>
-    <link rel="shortcut icon" href="img/decoration/title.ico"/>
-    <!--[if lte IE 8]>
-    <script>
-        document.createElement('ng-include');
-        document.createElement('ng-pluralize');
-        document.createElement('ra-abbreviation');
-
-        // Optionally these for CSS
-        document.createElement('ng:include');
-        document.createElement('ng:pluralize');
-        document.createElement('ra:abbreviation');
-    </script>
-    <![endif]-->
-</head>
-<body>
-
-<!--[if lte IE 8]>
-<div id="BVWarning"
-     style="width: 100%; min-width: 1100px; background: #535353; color: #b0b0b0; padding: 15px; text-align: center;">
-    <div>IE8，已经老了…</div>
-    推荐使用<a style="color: white;" href="http://w.x.baidu.com/alading/anquan_soft_down_ub/14744"> Chrome </a>
-    或
-    <a style="color: white;" href="http://download.firefox.com.cn/releases/stub/official/zh-CN/Firefox-latest.exe">
-        火狐 </a>，点击下载，立即更新浏览器。
-
-    <div onclick="document.getElementById('BVWarning').style.display ='none'" style="float: right; cursor: pointer;"><i
-            class="fa fa-times"></i></div>
-</div>
-<![endif]-->
-<div ui-view></div>
-<script data-main="main" type="text/javascript" src="plugins/requirejs/require.js" charset="UTF-8"></script>
-</body>
+    <!-- <script type="text/babel" src="scripts/example.js"></script> -->
+    <script type="text/babel" src="src/index.js"></script>
+  </body>
 </html>
