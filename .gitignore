@@ -48,6 +48,7 @@ local.properties
 x64/
 build/
 node_modules/
+.idea/
 [Bb]in/
 [Oo]bj/
 
