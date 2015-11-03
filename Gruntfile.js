@@ -74,10 +74,10 @@ module.exports = function (grunt) {
         options: {
           spawn: true
         },
-        jsHint: {
-          files: ['<%= src %>/**/*.js'],
-          tasks: ['jshint:src']
-        },
+        // jsHint: {
+        //   files: ['<%= src %>/**/*.js'],
+        //   tasks: ['jshint:src']
+        // },
         mergeJs: {
           files: ['<%= src %>/**/*.js'],
           tasks: ['browserify:js']

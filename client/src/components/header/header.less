@@ -1,0 +1,47 @@
+.header {
+  background: black;
+  color: #cccccc;
+  padding: 0 15%;
+  .nav {
+    height: 100%;
+    .navBrand {
+      padding: 8px 0;
+      display: inline-block;
+      b {
+        font-size: 22px;
+        color: #eeeeee;
+      }
+      a {
+        color: rgba(39, 132, 209, 0.94);
+        margin: 0 10px;
+        font-size: 22px;
+        text-decoration: none;
+        &:hover{
+          color: rgba(39, 132, 209, 0.94);
+          cursor: default;
+        }
+      }
+    }
+
+    .navContent {
+      display: inline-block;
+      .project-unactived {
+        display: inline;
+        margin: 0 8px;
+        font-size: 16px;
+        transition: all 0.4s;
+        &:hover {
+          color: #ffffff;
+          cursor: pointer;
+        }
+      }
+      .project-actived {
+        display: inline;
+        margin: 0 8px;
+        font-size: 16px;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+}
