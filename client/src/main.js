@@ -47,6 +47,7 @@ var LayoutBox = React.createClass({
     return {
       selectedProject: "default",
       selectedVersion: "latest",
+      selectedApiId: 0,
       projects: [],
       versions: [],
       apiInfo: {}
@@ -60,7 +61,8 @@ var LayoutBox = React.createClass({
       <div>
         <HeaderBox selectedProject={this.state.selectedProject} projects={this.state.projects} changeProject={this.changeProject}/>
         <div className="main-body">
-          <MenuBox versions={this.state.versions} selectedVersion={this.state.selectedVersion} changeVersion={this.changeVersion} />
+          <MenuBox versions={this.state.versions} selectedVersion={this.state.selectedVersion} changeVersion={this.changeVersion}
+            selectedApiId={this.state.selectedApiId} apiInfo={this.state.apiInfo}/>
           <ContentBox />
         </div>
       </div>

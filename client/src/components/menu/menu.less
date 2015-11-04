@@ -33,7 +33,16 @@
 
   .menu-nav {
     margin-top: 20px;
-    height: 630px;
     overflow-y: auto;
+
+    .menu-module {
+      border-top: solid 2px #999999;
+      margin-bottom: 30px;
+      width: 80%;
+      transition: all 0.5s;
+      &:hover {
+        width: 100%
+      }
+    }
   }
 }
