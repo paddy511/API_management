@@ -1,9 +1,232 @@
 {
+  "_id": "a001",
   "version": "latest",
   "name" : "ra_portal",
   "modules":[
     {
-      
+      "_id": "a002",
+      "name": "shit-1",
+      "methods": [
+        {
+          "_id": "a001",
+          "name": "angular.bind",
+          "usages": "angular.bind(self, fn, args);",
+          "category": "function",
+          "arguments": [
+            {
+              "param": "self",
+              "type": "Object",
+              "details": "Context which fn should be evaluated in."
+            },
+            {
+              "param": "fn",
+              "type": "function",
+              "details": "Function to be bound."
+            }
+          ],
+          "return": {
+            "type": "function",
+            "details": "Function that wraps the fn with all the specified bindings.",
+            "example": "fghfjhkasdasds"
+          }
+        },
+        {
+          "_id": "a003",
+          "name": "angular.bind-copy1",
+          "usages": "angular.bind(self, fn, args);",
+          "category": "function",
+          "arguments": [
+            {
+              "param": "self",
+              "type": "Object",
+              "details": "Context which fn should be evaluated in."
+            },
+            {
+              "param": "fn",
+              "type": "function",
+              "details": "Function to be bound."
+            }
+          ],
+          "return": {
+            "type": "function",
+            "details": "Function that wraps the fn with all the specified bindings.",
+            "example": "fghfjhkasdasds"
+          }
+        },
+        {
+          "_id": "a004",
+          "name": "angular.bind-copy2",
+          "usages": "angular.bind(self, fn, args);",
+          "category": "function",
+          "arguments": [
+            {
+              "param": "self",
+              "type": "Object",
+              "details": "Context which fn should be evaluated in."
+            },
+            {
+              "param": "fn",
+              "type": "function",
+              "details": "Function to be bound."
+            }
+          ],
+          "return": {
+            "type": "function",
+            "details": "Function that wraps the fn with all the specified bindings.",
+            "example": "fghfjhkasdasds"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "a006",
+      "name": "shit-2",
+      "methods": [
+        {
+          "_id": "a007",
+          "name": "angular.bind",
+          "usages": "angular.bind(self, fn, args);",
+          "category": "function",
+          "arguments": [
+            {
+              "param": "self",
+              "type": "Object",
+              "details": "Context which fn should be evaluated in."
+            },
+            {
+              "param": "fn",
+              "type": "function",
+              "details": "Function to be bound."
+            }
+          ],
+          "return": {
+            "type": "function",
+            "details": "Function that wraps the fn with all the specified bindings.",
+            "example": "fghfjhkasdasds"
+          }
+        },
+        {
+          "_id": "a008",
+          "name": "angular.bind-copy1",
+          "usages": "angular.bind(self, fn, args);",
+          "category": "function",
+          "arguments": [
+            {
+              "param": "self",
+              "type": "Object",
+              "details": "Context which fn should be evaluated in."
+            },
+            {
+              "param": "fn",
+              "type": "function",
+              "details": "Function to be bound."
+            }
+          ],
+          "return": {
+            "type": "function",
+            "details": "Function that wraps the fn with all the specified bindings.",
+            "example": "fghfjhkasdasds"
+          }
+        },
+        {
+          "_id": "a009",
+          "name": "angular.bind-copy2",
+          "usages": "angular.bind(self, fn, args);",
+          "category": "function",
+          "arguments": [
+            {
+              "param": "self",
+              "type": "Object",
+              "details": "Context which fn should be evaluated in."
+            },
+            {
+              "param": "fn",
+              "type": "function",
+              "details": "Function to be bound."
+            }
+          ],
+          "return": {
+            "type": "function",
+            "details": "Function that wraps the fn with all the specified bindings.",
+            "example": "fghfjhkasdasds"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "a010",
+      "name": "shit-3",
+      "methods": [
+        {
+          "_id": "a011",
+          "name": "angular.bind",
+          "usages": "angular.bind(self, fn, args);",
+          "category": "function",
+          "arguments": [
+            {
+              "param": "self",
+              "type": "Object",
+              "details": "Context which fn should be evaluated in."
+            },
+            {
+              "param": "fn",
+              "type": "function",
+              "details": "Function to be bound."
+            }
+          ],
+          "return": {
+            "type": "function",
+            "details": "Function that wraps the fn with all the specified bindings.",
+            "example": "fghfjhkasdasds"
+          }
+        },
+        {
+          "_id": "a012",
+          "name": "angular.bind-copy1",
+          "usages": "angular.bind(self, fn, args);",
+          "category": "function",
+          "arguments": [
+            {
+              "param": "self",
+              "type": "Object",
+              "details": "Context which fn should be evaluated in."
+            },
+            {
+              "param": "fn",
+              "type": "function",
+              "details": "Function to be bound."
+            }
+          ],
+          "return": {
+            "type": "function",
+            "details": "Function that wraps the fn with all the specified bindings.",
+            "example": "fghfjhkasdasds"
+          }
+        },
+        {
+          "_id": "a013",
+          "name": "angular.bind-copy2",
+          "usages": "angular.bind(self, fn, args);",
+          "category": "function",
+          "arguments": [
+            {
+              "param": "self",
+              "type": "Object",
+              "details": "Context which fn should be evaluated in."
+            },
+            {
+              "param": "fn",
+              "type": "function",
+              "details": "Function to be bound."
+            }
+          ],
+          "return": {
+            "type": "function",
+            "details": "Function that wraps the fn with all the specified bindings.",
+            "example": "fghfjhkasdasds"
+          }
+        }
+      ]
     }
   ]
 }

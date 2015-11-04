@@ -60,7 +60,7 @@ var LayoutBox = React.createClass({
       <div>
         <HeaderBox selectedProject={this.state.selectedProject} projects={this.state.projects} changeProject={this.changeProject}/>
         <div className="main-body">
-          <MenuBox versions={this.state.versions} selectedVersion={this.state.selectedVersion} changeVersion={this.changeVersion}/>
+          <MenuBox versions={this.state.versions} selectedVersion={this.state.selectedVersion} changeVersion={this.changeVersion} />
           <ContentBox />
         </div>
       </div>
