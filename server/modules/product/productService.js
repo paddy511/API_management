@@ -1,7 +1,7 @@
 /**
  * Created by qinghaibo on 2015/9/24.
  */
-var identityService = require('../../components/services/identityService');
+
 var productModelService = require('./productModelService');
 
 var productService = {};

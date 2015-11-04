@@ -2,7 +2,6 @@
  * Created by qinghaibo on 2015/9/22.
  */
 var productService = require('./productService');
-var actionResult = require('../../components/services/actionResult');
 var productController = {};
 
 productController.saveProduct = function (req, res) {
