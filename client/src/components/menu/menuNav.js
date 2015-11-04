@@ -10,7 +10,8 @@ var MenuNav = React.createClass({
     var _modules = this.props.apiInfo.modules || [];
 
     var moduleNodes = _modules.map(function(module){
-      return (<MenuModuleBox key={module._id} moduleId={module._id} moduleName={module.name} methods={module.methods} selectedApiId={this.props.selectedApiId}/>);
+      return (<MenuModuleBox key={module._id} moduleId={module._id} moduleName={module.name} methods={module.methods} selectedApiId={this.props.selectedApiId}
+        changeApi={this.props.changeApi}/>);
     }.bind(this));
     return (
       <div className="menu-nav" style={{height: _navInnerheight}}>

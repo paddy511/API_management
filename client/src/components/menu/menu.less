@@ -40,8 +40,30 @@
       margin-bottom: 30px;
       width: 80%;
       transition: all 0.5s;
-      &:hover {
-        width: 100%
+
+      h4 {
+        font-size: 20px;
+        color: #000000;
+      }
+
+      .nav-category{
+        font-size: 18px;
+        font-style: italic;
+        color: #444444;
+      }
+
+      .nav-method-unactived {
+        color: #888888;
+        transition: all 0.3s;
+        &:hover {
+          color: rgba(116, 178, 240, 0.93);
+          cursor: pointer;
+        }
+      }
+
+      .nav-method-actived {
+        color: rgba(116, 178, 240, 0.93);
+        cursor: pointer;
       }
     }
   }

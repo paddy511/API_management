@@ -9,7 +9,7 @@
       "methods": [
         {
           "_id": "a001",
-          "name": "angular.bind",
+          "name": "angular.bind-copy",
           "usages": "angular.bind(self, fn, args);",
           "category": "function",
           "arguments": [
@@ -34,7 +34,7 @@
           "_id": "a003",
           "name": "angular.bind-copy1",
           "usages": "angular.bind(self, fn, args);",
-          "category": "function",
+          "category": "directive",
           "arguments": [
             {
               "param": "self",
@@ -86,7 +86,7 @@
           "_id": "a007",
           "name": "angular.bind",
           "usages": "angular.bind(self, fn, args);",
-          "category": "function",
+          "category": "filter",
           "arguments": [
             {
               "param": "self",
@@ -161,7 +161,7 @@
           "_id": "a011",
           "name": "angular.bind",
           "usages": "angular.bind(self, fn, args);",
-          "category": "function",
+          "category": "service",
           "arguments": [
             {
               "param": "self",
