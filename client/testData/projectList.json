@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "001",
+    "name": "ra_portal"
+  },
+  {
+    "_id": "002",
+    "name": "ra_session_managemnet"
+  },
+  {
+    "_id": "003",
+    "name": "ra_basic_tools"
+  }
+]

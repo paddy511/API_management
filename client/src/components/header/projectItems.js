@@ -8,7 +8,7 @@ var ProjectItems = React.createClass({
     var that = this;
     var projectNodes = this.props.projects.map(
       function (project) {
-        if(project._id === that.props.selectedProject){
+        if(project._id === that.props.selectedProject || that.props.selectedProject === "default" && project.name === "ra_basic_tools"){
           return (<li id={project._id} key={project._id} className="project-actived" onClick={this.changeProject}>{project.name}</li>);
         }else {
           return (<li id={project._id} key={project._id} className="project-unactived" onClick={this.changeProject}>{project.name}</li>);
