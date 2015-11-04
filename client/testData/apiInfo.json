@@ -1,11 +1,14 @@
 {
+  "_id": "a001",
   "version": "latest",
   "name" : "ra_portal",
   "modules":[
     {
+      "_id": "a002",
       "name": "shit-1",
       "methods": [
         {
+          "_id": "a001",
           "name": "angular.bind",
           "usages": "angular.bind(self, fn, args);",
           "category": "function",
@@ -28,6 +31,7 @@
           }
         },
         {
+          "_id": "a003",
           "name": "angular.bind-copy1",
           "usages": "angular.bind(self, fn, args);",
           "category": "function",
@@ -50,6 +54,7 @@
           }
         },
         {
+          "_id": "a004",
           "name": "angular.bind-copy2",
           "usages": "angular.bind(self, fn, args);",
           "category": "function",
@@ -74,9 +79,11 @@
       ]
     },
     {
+      "_id": "a006",
       "name": "shit-2",
       "methods": [
         {
+          "_id": "a007",
           "name": "angular.bind",
           "usages": "angular.bind(self, fn, args);",
           "category": "function",
@@ -99,6 +106,7 @@
           }
         },
         {
+          "_id": "a008",
           "name": "angular.bind-copy1",
           "usages": "angular.bind(self, fn, args);",
           "category": "function",
@@ -121,6 +129,7 @@
           }
         },
         {
+          "_id": "a009",
           "name": "angular.bind-copy2",
           "usages": "angular.bind(self, fn, args);",
           "category": "function",
@@ -145,9 +154,11 @@
       ]
     },
     {
+      "_id": "a010",
       "name": "shit-3",
       "methods": [
         {
+          "_id": "a011",
           "name": "angular.bind",
           "usages": "angular.bind(self, fn, args);",
           "category": "function",
@@ -170,6 +181,7 @@
           }
         },
         {
+          "_id": "a012",
           "name": "angular.bind-copy1",
           "usages": "angular.bind(self, fn, args);",
           "category": "function",
@@ -192,6 +204,7 @@
           }
         },
         {
+          "_id": "a013",
           "name": "angular.bind-copy2",
           "usages": "angular.bind(self, fn, args);",
           "category": "function",
