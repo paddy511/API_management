@@ -120,7 +120,7 @@
       "methods": [
         {
           "_id": "b003",
-          "name": "angular.bind-copy",
+          "name": "xxxxxxx",
           "category": "function",
           "components": [
             {
@@ -190,7 +190,7 @@
         },
         {
           "_id": "b005",
-          "name": "angular.bind-copy",
+          "name": "adesdfsdf",
           "category": "function",
           "components": [
             {
@@ -258,6 +258,34 @@
             },
             {
               "name" : "eeee",
+              "describe": "",
+              "componentType": "attribute",
+              "type": "String"
+            },
+            {
+              "name": "bind",
+              "usages": "angular.bind(self, fn, args);",
+              "componentType": "function",
+              "arguments": [
+                {
+                  "param": "self",
+                  "type": "Object",
+                  "details": "Context which fn should be evaluated in."
+                },
+                {
+                  "param": "fn",
+                  "type": "function",
+                  "details": "Function to be bound."
+                }
+              ],
+              "return": {
+                "type": "function",
+                "details": "Function that wraps the fn with all the specified bindings.",
+                "example": "fghfjhkasdasds"
+              }
+            },
+            {
+              "name" : "eeee",
               "describe": "angular.bind(self, fn, args);",
               "componentType": "attribute",
               "type": "String"
@@ -266,7 +294,7 @@
         },
         {
           "_id": "c004",
-          "name": "angular.bind-copy",
+          "name": "bind-copy",
           "category": "function",
           "components": [
             {

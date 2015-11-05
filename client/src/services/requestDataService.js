@@ -1,7 +1,7 @@
 var $ = require("../../libs/jquery.min");
 
 exports.asyncGetProjectList = function (cb, that) {
-  var url = "testData/projectList.json";
+  var url = "/api/projects";
   $.ajax({
       url: url,
       dataType: 'json',

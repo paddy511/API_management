@@ -70,7 +70,7 @@ var LayoutBox = React.createClass({
         <div className="main-body">
           <MenuBox versions={this.state.versions} selectedVersion={this.state.selectedVersion} changeVersion={this.changeVersion}
             selectedApiId={this.state.selectedApiId} apiInfo={this.state.apiInfo} changeApi={this.changeApi}/>
-          <ContentBox />
+          <ContentBox selectedApiId={this.state.selectedApiId} apiInfo={this.state.apiInfo}/>
         </div>
       </div>
     );
