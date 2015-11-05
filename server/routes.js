@@ -9,6 +9,6 @@
 var express = require('express');
 var router = express.Router();
 
-router.use('/product', require('./modules/product/router'));
+router.use('/projects', require('./modules/project/router'));
 
 module.exports = router;

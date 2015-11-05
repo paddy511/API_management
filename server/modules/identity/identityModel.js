@@ -4,7 +4,7 @@
 var mongoose = require('mongoose');
 
 var identityModule = {
-    "_id": Number
+    "min_id": Number
 };
 
 var identitySchema = mongoose.Schema(identityModule);

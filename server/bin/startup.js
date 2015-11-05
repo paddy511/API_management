@@ -2,7 +2,7 @@
 var app = require('../app');
 var debug = require('debug')('server:server');
 var http = require('http');
-var config = require('../config/environment')
+var config = require('../config/environment');
 var server;
 
 //connect to mangodb
@@ -86,3 +86,9 @@ function onListening() {
 })();
 
 
+
+
+
+// -------------------text-----------------
+var projectService = require('../modules/project/projectService');
+projectService.saveProject("ra_session_management");
