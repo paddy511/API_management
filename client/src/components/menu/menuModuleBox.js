@@ -13,11 +13,8 @@ var MenuModuleBox = React.createClass({
     var _moduleContentNodes = categoryList.map(function (category) {
        var _methodNodes = _methods.map(function (method) {
         if(method.category === category){
-          if(that.props.selectedApiId === method._id){
-            return (<div id={method._id} key={method._id} className="nav-method-actived" onClick={that.changeApi}>{method.name}</div>);
-          }else {
-            return (<div id={method._id} key={method._id} className="nav-method-unactived" onClick={that.changeApi}>{method.name}</div>);
-          }
+          var methodClass = that.props.selectedApiId === method._id ? "nav-method-actived" : "nav-method-unactived";
+          return (<div id={method._id} key={method._id} className={methodClass} onClick={that.changeApi}>{method.name}</div>);
         }else {
           return;
         }

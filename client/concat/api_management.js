@@ -51,11 +51,9 @@ var ProjectItems = React.createClass({displayName: "ProjectItems",
     var that = this;
     var projectNodes = this.props.projects.map(
       function (project) {
-        if(project._id === that.props.selectedProject || that.props.selectedProject === "default" && project.name === "ra_basic_tools"){
-          return (React.createElement("li", {id: project._id, key: project._id, className: "project-actived", onClick: this.changeProject}, project.name));
-        }else {
-          return (React.createElement("li", {id: project._id, key: project._id, className: "project-unactived", onClick: this.changeProject}, project.name));
-        }
+        var _projectClass = (project._id === that.props.selectedProject || that.props.selectedProject === "default" && project.name === "ra_basic_tools")
+          ? "project-actived" : "project-unactived";
+          return (React.createElement("li", {id: project._id, key: project._id, className: _projectClass, onClick: this.changeProject}, project.name));
       }.bind(this)
     );
     return (
@@ -116,11 +114,8 @@ var MenuModuleBox = React.createClass({displayName: "MenuModuleBox",
     var _moduleContentNodes = categoryList.map(function (category) {
        var _methodNodes = _methods.map(function (method) {
         if(method.category === category){
-          if(that.props.selectedApiId === method._id){
-            return (React.createElement("div", {id: method._id, key: method._id, className: "nav-method-actived", onClick: that.changeApi}, method.name));
-          }else {
-            return (React.createElement("div", {id: method._id, key: method._id, className: "nav-method-unactived", onClick: that.changeApi}, method.name));
-          }
+          var methodClass = that.props.selectedApiId === method._id ? "nav-method-actived" : "nav-method-unactived";
+          return (React.createElement("div", {id: method._id, key: method._id, className: methodClass, onClick: that.changeApi}, method.name));
         }else {
           return;
         }
