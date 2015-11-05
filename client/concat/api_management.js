@@ -126,7 +126,7 @@ var ProjectItems = React.createClass({displayName: "ProjectItems",
     var that = this;
     var projectNodes = this.props.projects.map(
       function (project) {
-        var _projectClass = (project._id === that.props.selectedProject || that.props.selectedProject === "default" && project.name === "ra_basic_tools")
+        var _projectClass = (project._id == that.props.selectedProject || that.props.selectedProject === "default" && project.name === "ra_basic_tools")
           ? "project-actived" : "project-unactived";
           return (React.createElement("li", {id: project._id, key: project._id, className: _projectClass, onClick: this.changeProject}, project.name));
       }.bind(this)
