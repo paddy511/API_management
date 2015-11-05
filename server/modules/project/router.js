@@ -9,4 +9,7 @@ var projectController = require('./projectController');
 //get projects
 router.get("/",  nocache.noCache(), projectController.getProjectList);
 
+//add projects
+router.post("/",  projectController.saveProject);
+
 module.exports = router;

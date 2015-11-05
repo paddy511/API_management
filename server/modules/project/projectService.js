@@ -6,17 +6,21 @@ var identityService = require('../identity/identityService');
 
 var projectService = {};
 
+projectService.getProjectFromReq = function(req){
+    var _project = {
+        name: req.body.name
+    };
+    return _project;
+};
 
-projectService.saveProject = function(projectName){
+projectService.saveProject = function(project){
     return identityService.getIdentity()
         .then(function(result){
 
             console.log("get id to set project id");
             console.log(result);
 
-            var project = {};
             project._id = result;
-            project.name = projectName;
             return project;
         })
         .then(projectModelService.saveProject);
