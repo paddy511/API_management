@@ -14,7 +14,7 @@ var MethodInfo = React.createClass({
     });
 
     return (
-      <div>
+      <div className="method-info-box">
         {methodNodes}
       </div>
     );

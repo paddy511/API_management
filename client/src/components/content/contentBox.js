@@ -10,14 +10,16 @@ var ContentBox = React.createClass({
     if(!_method){
       return (
         <div className="content-box">
-          <img src={"img/sb.jpg"}/>
+          <img src={"img/sb.jpg"} width="100%" height="100%"/>
         </div>
       );
     }
 
+    var _navInnerheight = (window.innerHeight-70) + "px";
+
     return (
-      <div className="content-box" >
-        <h3>{_method.name}</h3>
+      <div className="content-box" style={{height: _navInnerheight}}>
+        <h2>{_method.name}</h2>
         <MethodInfo components={_method.components}/>
       </div>);
   }

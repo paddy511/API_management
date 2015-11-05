@@ -10,12 +10,12 @@ var React = require("react");
 var AttributeModule = React.createClass({displayName: "AttributeModule",
 
   render: function () {
-    var _describeNode = this.props.component.describe ? React.createElement("div", null, React.createElement("span", null, "描述："), React.createElement("span", null, this.props.component.describe)) : React.createElement("div", null);
+    var _describeNode = this.props.component.describe ? React.createElement("div", null, React.createElement("h5", null, "描述："), React.createElement("div", null, this.props.component.describe)) : React.createElement("div", null);
 
     return (
-      React.createElement("div", null, 
+      React.createElement("div", {className: "single-components"}, 
         React.createElement("h4", null, this.props.component.name), 
-        React.createElement("div", null, React.createElement("span", null, "类型:"), React.createElement("span", null, this.props.component.type)), 
+        React.createElement("div", {className: "single-type"}, React.createElement("span", null, "类型："), React.createElement("span", null, this.props.component.type)), 
         _describeNode
       )
     );
@@ -37,14 +37,16 @@ var ContentBox = React.createClass({displayName: "ContentBox",
     if(!_method){
       return (
         React.createElement("div", {className: "content-box"}, 
-          React.createElement("img", {src: "img/sb.jpg"})
+          React.createElement("img", {src: "img/sb.jpg", width: "100%", height: "100%"})
         )
       );
     }
 
+    var _navInnerheight = (window.innerHeight-70) + "px";
+
     return (
-      React.createElement("div", {className: "content-box"}, 
-        React.createElement("h3", null, _method.name), 
+      React.createElement("div", {className: "content-box", style: {height: _navInnerheight}}, 
+        React.createElement("h2", null, _method.name), 
         React.createElement(MethodInfo, {components: _method.components})
       ));
   }
@@ -57,9 +59,38 @@ var React = require("react");
 
 var FunctionModule = React.createClass({displayName: "FunctionModule",
   render: function () {
+
+    var parmaNodes = this.props.component.arguments.map(function (parma) {
+      return (React.createElement("tr", null, React.createElement("td", null, parma.param), React.createElement("td", null, parma.type), React.createElement("td", null, parma.details)));
+    });
+
+
     return (
-      React.createElement("div", null, 
-        React.createElement("h4", null, this.props.component.name)
+      React.createElement("div", {className: "single-components"}, 
+        React.createElement("h4", null, this.props.component.name), 
+        React.createElement("div", {className: "single-type"}, React.createElement("span", null, "类型："), React.createElement("span", null, "Function")), 
+        React.createElement("div", null, React.createElement("h5", null, "用法："), React.createElement("div", null, this.props.component.usages)), 
+        React.createElement("div", null, React.createElement("h5", null, "参数介绍："), 
+          React.createElement("div", null, 
+            React.createElement("table", {className: "table table-bordered"}, 
+              React.createElement("tbody", null, 
+                React.createElement("tr", {className: "info"}, React.createElement("td", null, "参数"), React.createElement("td", null, "类型"), React.createElement("td", null, "描述")), 
+                parmaNodes
+              )
+            )
+          )
+        ), 
+        React.createElement("div", null, React.createElement("h5", null, "返回值："), 
+          React.createElement("div", null, 
+            React.createElement("table", {className: "table table-bordered"}, 
+              React.createElement("tbody", null, 
+                React.createElement("tr", null, React.createElement("td", {className: "success"}, "类型"), React.createElement("td", null, this.props.component.return.type)), 
+                React.createElement("tr", null, React.createElement("td", {className: "success"}, "描述"), React.createElement("td", null, this.props.component.return.details)), 
+                React.createElement("tr", null, React.createElement("td", {className: "success"}, "实例"), React.createElement("td", null, this.props.component.return.example))
+              )
+            )
+          )
+        )
       )
     );
   }
@@ -84,7 +115,7 @@ var MethodInfo = React.createClass({displayName: "MethodInfo",
     });
 
     return (
-      React.createElement("div", null, 
+      React.createElement("div", {className: "method-info-box"}, 
         methodNodes
       )
     );
@@ -219,7 +250,7 @@ var MenuNav = React.createClass({displayName: "MenuNav",
   render: function () {
     var that = this;
     //获取浏览器高度
-    var _navInnerheight = (window.innerHeight - 110) + "px";
+    var _navInnerheight = (window.innerHeight - 160) + "px";
     var _modules = this.props.apiInfo.modules || [];
 
     var moduleNodes = _modules.map(function(module){

@@ -6,7 +6,7 @@ var MenuNav = React.createClass({
   render: function () {
     var that = this;
     //获取浏览器高度
-    var _navInnerheight = (window.innerHeight - 110) + "px";
+    var _navInnerheight = (window.innerHeight - 160) + "px";
     var _modules = this.props.apiInfo.modules || [];
 
     var moduleNodes = _modules.map(function(module){
