@@ -8,6 +8,7 @@ var webApiController = require('./webApiController');
 
 //get projects version list
 router.get("/versionlist",  nocache.noCache(), webApiController.getVersionList);
+router.get("/detail",  nocache.noCache(), webApiController.getWebApiDetail);
 
 //add projects
 //router.post("/",  webApiController.saveProject);

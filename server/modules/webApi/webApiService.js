@@ -6,9 +6,12 @@ var webApiModelService = require('./webApiModelService');
 
 var webApiService = {};
 
-webApiService.getVersionList = function(projectName){
-    return webApiModelService.getVersionList(projectName);
-}
+webApiService.getVersionList = function(dbName){
+    return webApiModelService.getVersionList(dbName);
+};
 
+webApiService.getWebApiDetail = function(dbName, versionId){
+    return webApiModelService.getWebApiDetail(dbName, versionId);
+};
 
 module.exports = webApiService;

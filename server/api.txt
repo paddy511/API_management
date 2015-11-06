@@ -15,9 +15,16 @@ data: {
 return: {success: true}
 
 3. 获取对应项目版本列表
-url: api/webapi/versionlist?projectid
+url: api/webapi/versionlist?[projectid]
 method: get
 return: [{
 	_id: Number
 	version: String
 }, {...}]
+
+4. 获取项目对应版本的详细
+url: api/webapi/detail?[projectid]&[versionid]
+method: get
+return: [
+	// all
+]

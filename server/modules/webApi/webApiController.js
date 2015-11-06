@@ -30,4 +30,29 @@ webApiController.getVersionList = function(req, res){
     ;
 };
 
+webApiController.getWebApiDetail = function(req, res){
+    projectService.getProjectName({_id: req.query.projectid})
+        .then(function(result){
+            console.log("get project name by id: ");
+            console.log(result.name)
+            return result.name;
+        })
+        .then(function(db_name){
+            return webApiService.getWebApiDetail(db_name, req.query.versionid);
+        })
+        .then(function(result){
+            console.log("get webapi detail success: ");
+            console.log(result);
+
+            res.json(result);
+            res.end();
+        }, function(err){
+            console.log(err);
+            res.status(500);
+            res.json({errorCode: "get webapi detail failed."});
+            res.end();
+        })
+    ;
+};
+
 module.exports = webApiController;
