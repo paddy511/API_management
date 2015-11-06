@@ -25,7 +25,7 @@ webApiModelService.getWebApiDetail = function(dbName, version){
         dbModel[dbName] = webApiModel.getModel(dbName);
     }
 
-    return dbModel[dbName].find({version: version}).exec(function(err){
+    return dbModel[dbName].findOne({version: version}).exec(function(err){
         if(err){
             console.log("get version list failed: ");
             console.log(err);
