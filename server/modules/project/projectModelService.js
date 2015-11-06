@@ -6,10 +6,19 @@ var Promise = require("mpromise");
 
 var projectModelService = {};
 
-projectModelService.getProjectList = function(){
-    return Projects.find({}).exec(function(err){
+projectModelService.getProjectList = function(filter){
+    return Projects.find(filter).exec(function(err){
         if(err){
             console.log("get project list failed: ");
+            console.log(err);
+        }
+    });
+};
+
+projectModelService.getProjectName = function(filter){
+    return Projects.findOne(filter).exec(function(err){
+        if(err){
+            console.log("get project name failed: ");
             console.log(err);
         }
     });
@@ -30,5 +39,6 @@ projectModelService.saveProject = function(project){
     });
     return promise;
 };
+
 
 module.exports = projectModelService;

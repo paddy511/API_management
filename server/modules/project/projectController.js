@@ -6,7 +6,7 @@ var projectService = require('./projectService');
 var projectController = {};
 
 projectController.getProjectList = function(req, res){
-    projectService.getProjectList()
+    projectService.getProjectList({})
         .then(function(result){
             console.log("project list: ");
             console.log(result);

@@ -90,5 +90,3 @@ function onListening() {
 
 
 // -------------------text-----------------
-var projectService = require('../modules/project/projectService');
-//projectService.saveProject("ra_session_management");

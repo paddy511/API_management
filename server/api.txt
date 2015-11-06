@@ -1,0 +1,23 @@
+1. 获取项目列表
+url: api/project
+method: get
+return: [{
+	_id: Number
+	name: String
+},{...}]
+
+2. 添加项目
+url: api/project
+method: post
+data: {
+	name: String
+}
+return: {success: true}
+
+3. 获取对应项目版本列表
+url: api/webapi/versionlist?projectid
+method: get
+return: [{
+	_id: Number
+	version: String
+}, {...}]

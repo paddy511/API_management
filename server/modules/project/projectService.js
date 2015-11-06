@@ -26,8 +26,12 @@ projectService.saveProject = function(project){
         .then(projectModelService.saveProject);
 };
 
-projectService.getProjectList = function(){
-    return projectModelService.getProjectList();
+projectService.getProjectList = function(filter){
+    return projectModelService.getProjectList(filter);
+};
+
+projectService.getProjectName = function(filter){
+    return projectModelService.getProjectName(filter);
 }
 
 module.exports = projectService;
