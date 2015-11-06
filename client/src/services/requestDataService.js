@@ -16,7 +16,7 @@ exports.asyncGetProjectList = function (cb, that) {
 }
 
 exports.asyncGetVersionList = function (cb, that, selectedProject) {
-  var url = "testData/versionList.json" + "?selectedProject=" + selectedProject;
+  var url = "/api/webapi/versionlist" + "?projectid=" + selectedProject;
   $.ajax({
       url: url,
       dataType: 'json',
@@ -32,7 +32,7 @@ exports.asyncGetVersionList = function (cb, that, selectedProject) {
 }
 
 exports.asyncGetAPIByProjectAndVersion = function (cb, that, selectedProject, selectedVersion) {
-  var url = "testData/apiInfo.json" + "?selectedProject=" + selectedProject + "&selectedVersion=" + selectedVersion;
+  var url = "/api/webapi/detail" + "?projectid=" + selectedProject + "&version=" + selectedVersion;
   $.ajax({
       url: url,
       dataType: 'json',
