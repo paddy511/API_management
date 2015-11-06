@@ -251,7 +251,7 @@ var MenuNav = React.createClass({displayName: "MenuNav",
     var that = this;
     //获取浏览器高度
     var _navInnerheight = (window.innerHeight - 160) + "px";
-    var _modules = this.props.apiInfo.modules || [];
+    var _modules = this.props.apiInfo && this.props.apiInfo.modules || [];
 
     var moduleNodes = _modules.map(function(module){
       return (React.createElement(MenuModuleBox, {key: module._id, moduleId: module._id, moduleName: module.name, methods: module.methods, selectedApiId: this.props.selectedApiId, 
@@ -280,7 +280,7 @@ var VersionBar = React.createClass({displayName: "VersionBar",
     var that = this;
     var versionNodes = this.props.versions.map(
       function (version) {
-          return (React.createElement("option", {property: "voucherCategoryClass", key: version._id, value: version.name}, version.name));
+          return (React.createElement("option", {property: "voucherCategoryClass", key: version._id, value: version.version}, version.version));
       }.bind(this)
     );
     return (
@@ -434,7 +434,7 @@ exports.asyncGetAPIByProjectAndVersion = function (cb, that, selectedProject, se
 function getMethodInModule(selectedApiId, module) {
   if(module && module.methods instanceof Array){
     for (var i = 0; i < module.methods.length; i++) {
-       if (module.methods[i]._id === selectedApiId) {
+       if (module.methods[i]._id == selectedApiId) {
          return module.methods[i];
        }
     }

@@ -10,7 +10,7 @@ var VersionBar = React.createClass({
     var that = this;
     var versionNodes = this.props.versions.map(
       function (version) {
-          return (<option property="voucherCategoryClass" key={version._id} value={version.name}>{version.name}</option>);
+          return (<option property="voucherCategoryClass" key={version._id} value={version.version}>{version.version}</option>);
       }.bind(this)
     );
     return (

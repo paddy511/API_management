@@ -1,7 +1,7 @@
 function getMethodInModule(selectedApiId, module) {
   if(module && module.methods instanceof Array){
     for (var i = 0; i < module.methods.length; i++) {
-       if (module.methods[i]._id === selectedApiId) {
+       if (module.methods[i]._id == selectedApiId) {
          return module.methods[i];
        }
     }
