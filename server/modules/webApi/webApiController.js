@@ -34,11 +34,8 @@ webApiController.getWebApiDetail = function(req, res){
     projectService.getProjectName({_id: req.query.projectid})
         .then(function(result){
             console.log("get project name by id: ");
-            console.log(result.name)
-            return result.name;
-        })
-        .then(function(db_name){
-            return webApiService.getWebApiDetail(db_name, req.query.version);
+            console.log(result.name);
+            return webApiService.getWebApiDetail(result.name, req.query.version);
         })
         .then(function(result){
             console.log("get webapi detail success: ");

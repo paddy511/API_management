@@ -16,6 +16,13 @@ projectModelService.getProjectList = function(filter){
 };
 
 projectModelService.getProjectName = function(filter){
+
+    if(filter._id === 'default'){
+        var promise = new Promise();
+        promise.fulfill({name: "ra_basic_tools"});
+        return promise;
+    }
+
     return Projects.findOne(filter).exec(function(err){
         if(err){
             console.log("get project name failed: ");

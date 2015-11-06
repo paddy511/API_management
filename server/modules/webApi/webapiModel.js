@@ -9,9 +9,9 @@ var webapiModel = {
 };
 
 var webapiSchema = {
-    getModel: function(projectName){
-        var schema_webapi = new mongoose.Schema(webapiModel,{"collection": projectName});
-        return mongoose.model(projectName, schema_webapi);
+    getModel: function(dbName){
+        var schema_webapi = new mongoose.Schema(webapiModel,{"collection": dbName});
+        return mongoose.model(dbName, schema_webapi);
     }
 };
 
