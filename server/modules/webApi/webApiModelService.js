@@ -14,8 +14,8 @@ webApiModelService.getVersionList = function(dbName){
     });
 };
 
-webApiModelService.getWebApiDetail = function(dbName, versionId){
-    return webApiModel.getModel(dbName).find({_id: versionId}).exec(function(err){
+webApiModelService.getWebApiDetail = function(dbName, version){
+    return webApiModel.getModel(dbName).find({version: version}).exec(function(err){
         if(err){
             console.log("get version list failed: ");
             console.log(err);

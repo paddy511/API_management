@@ -38,7 +38,7 @@ webApiController.getWebApiDetail = function(req, res){
             return result.name;
         })
         .then(function(db_name){
-            return webApiService.getWebApiDetail(db_name, req.query.versionid);
+            return webApiService.getWebApiDetail(db_name, req.query.version);
         })
         .then(function(result){
             console.log("get webapi detail success: ");

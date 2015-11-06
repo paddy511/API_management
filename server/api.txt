@@ -23,7 +23,7 @@ return: [{
 }, {...}]
 
 4. 获取项目对应版本的详细
-url: api/webapi/detail?[projectid]&[versionid]
+url: api/webapi/detail?[projectid]&[version]
 method: get
 return: [
 	// all

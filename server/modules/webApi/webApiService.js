@@ -10,8 +10,8 @@ webApiService.getVersionList = function(dbName){
     return webApiModelService.getVersionList(dbName);
 };
 
-webApiService.getWebApiDetail = function(dbName, versionId){
-    return webApiModelService.getWebApiDetail(dbName, versionId);
+webApiService.getWebApiDetail = function(dbName, version){
+    return webApiModelService.getWebApiDetail(dbName, version);
 };
 
 module.exports = webApiService;
